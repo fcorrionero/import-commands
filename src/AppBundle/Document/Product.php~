@@ -1,0 +1,32 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: felipe
+ * Date: 27/11/17
+ * Time: 10:40
+ */
+
+namespace AppBundle\Document;
+
+use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
+
+/**
+ * @MongoDB\Document
+ */
+class Product
+{
+  /**
+   * @MongoDB\Id
+   */
+  protected $id;
+
+  /**
+   * @MongoDB\Field(type="string")
+   */
+  protected $name;
+
+  /**
+   * @MongoDB\Field(type="float")
+   */
+  protected $price;
+}
