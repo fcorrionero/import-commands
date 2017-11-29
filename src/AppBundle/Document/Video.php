@@ -75,6 +75,11 @@ class Video
   protected $embedCode;
 
   /**
+   * @MongoDB\Field(type="string")
+   */
+  protected $isActive;
+
+  /**
    * @MongoDB\ReferenceMany(targetDocument="Thumbs", mappedBy="video")
    */
   protected $thumbs;
@@ -83,6 +88,16 @@ class Video
    * @MongoDB\ReferenceMany(targetDocument="Tags", mappedBy="video")
    */
   protected $tags;
+
+  /**
+   * @MongoDB\ReferenceMany(targetDocument="Category", mappedBy="video")
+   */
+  protected $categories;
+
+  /**
+   * @MongoDB\ReferenceMany(targetDocument="Pornstart", mappedBy="video")
+   */
+  protected $pornstarts;
 
 
 
